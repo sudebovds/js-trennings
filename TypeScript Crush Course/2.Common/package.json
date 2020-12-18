@@ -1,0 +1,13 @@
+{
+  "name": "2.Common",
+  "version": "1.0.0",
+  "description": "type scrip features",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
