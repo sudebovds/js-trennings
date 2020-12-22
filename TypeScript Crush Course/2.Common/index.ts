@@ -9,7 +9,7 @@ const obj1: object = {
     type: 'Custom type'
 }
 
-enum Role {ADMIN, ACCESS_TYPE, AUTHOR}
+enum Role {ADMIN, ACCESS_TYPE, AUTHOR}; //enum
 
 let obj2: {
     age: number;
@@ -26,7 +26,7 @@ obj2 = {
     type: 'Idiot',
     hobbies: ['Alcogol', 'Books', 'Boobs'],
     access: [2, 'not allow'],
-    role: Role.ADMIN
+    role: Role.ADMIN //enum type
 }
 
 const access = obj2.role === Role.ADMIN ? console.log(`${obj2.role}`) : console.error('You have no access!');
