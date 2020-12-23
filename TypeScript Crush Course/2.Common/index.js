@@ -13,6 +13,7 @@ var Role;
     Role[Role["ACCESS_TYPE"] = 1] = "ACCESS_TYPE";
     Role[Role["AUTHOR"] = 2] = "AUTHOR";
 })(Role || (Role = {}));
+; //enum
 var obj2;
 obj2 = {
     age: 35,
@@ -20,7 +21,7 @@ obj2 = {
     type: 'Idiot',
     hobbies: ['Alcogol', 'Books', 'Boobs'],
     access: [2, 'not allow'],
-    role: Role.ADMIN
+    role: Role.ADMIN //enum type
 };
 var access = obj2.role === Role.ADMIN ? console.log("" + obj2.role) : console.error('You have no access!');
 console.group('Typescript types:');
