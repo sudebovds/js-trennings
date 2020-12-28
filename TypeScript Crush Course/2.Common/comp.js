@@ -1,3 +1,4 @@
+"use strict";
 var root = document.getElementById("root");
 var one = "<h1>Hello world!</h1>";
 function combyne(input1, input2, likeWhat) {

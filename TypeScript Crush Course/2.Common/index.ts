@@ -45,6 +45,6 @@ console.group('Typescript types:');
     access;
 console.groupEnd();
 
-Object.keys(obj2).map((prop, index) => {
+/*Object.keys(obj2).map((prop, index) => {
     console.log(`${prop}: ${obj2[prop]}. Iteration: ${index}`);
-});
+});*/
