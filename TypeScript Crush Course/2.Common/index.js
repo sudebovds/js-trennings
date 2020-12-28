@@ -1,3 +1,4 @@
+"use strict";
 //Core TypeScript types
 var num = 0;
 var str = 'String constant';
@@ -37,6 +38,6 @@ console.log(typeof (obj2.hobbies));
 console.log(typeof (obj2.role));
 access;
 console.groupEnd();
-Object.keys(obj2).map(function (prop, index) {
-    console.log(prop + ": " + obj2[prop] + ". Iteration: " + index);
-});
+/*Object.keys(obj2).map((prop, index) => {
+    console.log(`${prop}: ${obj2[prop]}. Iteration: ${index}`);
+});*/ 
