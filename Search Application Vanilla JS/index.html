@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Search application</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="offscreen main__title">
+        SearchHound The Wikipedia powered Search Endgine
+      </h1>
+      <section class="searchEntry">
+        <h2 class="offscreen searchEntry__title">Search Term Entry</h2>
+        <div class="searchEntry__logo" aria-hidden="true">SearchHound</div>
+        <form action="" id="searchBar" class="searchEntry__searchBar">
+          <label for="search" class="offscreen searchEntry__label"
+            >Enter a searc term or phrase</label
+          >
+          <input
+            type="text"
+            autocomplete="off"
+            id="search"
+            class="searchEntry__input"
+          />
+          <button
+            id="clear"
+            class="none button clear searchEntry__button"
+            role="button"
+            tabindex="0"
+            aria-label="Clear Serch Terms"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+          <button
+            id="searchButton"
+            class="button searchEntry__searchButton"
+            type="submit"
+            aria-label="Submit Button"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </section>
+      <section class="results">
+        <h2 class="offscreen results__title"></h2>
+        <div class="statsBar">
+          <div id="stats" class="results__stats" aria-live="assertive"></div>
+        </div>
+        <div class="results__searchResults" id="searchResults">
+          <div class="result__item">
+            <div class="result__item_title">
+              <a href="#" class="result__title_link">Dog</a>
+            </div>
+            <div class="result__item_contents">
+              <div class="result__item_image">
+                <img src="#" alt="Dog" class="item__img" />
+              </div>
+              <div class="result__item_text">
+                <p class="result__item_description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Officiis ea maiores error dolorum laborum, minus quasi ipsum
+                  voluptate, natus itaque fugiat earum reprehenderit. Itaque
+                  dolorem, quisquam assumenda illo aspernatur minima?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        <span aria-hidden="true">&lt;&lt;</span> Powered by
+        <a class="footer__link" target="_blank" href="https://wikipedia.org"
+          >Wikipedia</a
+        ><span aria-hidden="true">&gt;&gt;</span>
+      </p>
+    </footer>
+  </body>
+</html>
