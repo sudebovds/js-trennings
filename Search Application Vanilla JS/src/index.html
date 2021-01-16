@@ -34,7 +34,7 @@
           <span class="blue">d</span>
           <span class="red exclaim">!</span>
         </div>
-        <form action="" id="searchBar" class="searchEntry__searchBar" data-form="form">
+        <form action="" id="searchBar" class="searchEntry__searchBar" data-form="form" role="search">
           <label for="search" class="offscreen searchEntry__label"
             >Enter a searc term or phrase</label
           >
@@ -43,6 +43,7 @@
             autocomplete="off"
             id="search"
             class="searchEntry__input"
+            role="searchbox"
           />
           <button
             id="clear"
@@ -69,24 +70,6 @@
           <div id="stats" class="results__stats" aria-live="assertive"></div>
         </div>
         <div class="results__searchResults" id="searchResults">
-          <div class="result__item">
-            <div class="result__item_title">
-              <a href="#" class="result__title_link">Dog</a>
-            </div>
-            <div class="result__item_contents">
-              <div class="result__item_image">
-                <img src="#" alt="Dog" class="item__img" />
-              </div>
-              <div class="result__item_text">
-                <p class="result__item_description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Officiis ea maiores error dolorum laborum, minus quasi ipsum
-                  voluptate, natus itaque fugiat earum reprehenderit. Itaque
-                  dolorem, quisquam assumenda illo aspernatur minima?
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>

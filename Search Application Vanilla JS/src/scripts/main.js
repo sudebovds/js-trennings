@@ -1,5 +1,6 @@
-import { getSearchTermHandler } from "./dataFunctions";
-import { setSearchFocusHandler } from "./searchBar";
+import { getSearchTermHandler, retriveSearchResults } from "./dataFunctions";
+import { setSearchFocusHandler, showClearTextButton, clearSearchText, clearPushListener } from "./searchBar";
+import { buildSearchResults, clearStatsLine, deleteSearchResults, setStatsLine } from "./searchResults";
 
 document.addEventListener('readystatechange', (event) => {
     if(event.target.readyState === 'complete'){
@@ -8,9 +9,14 @@ document.addEventListener('readystatechange', (event) => {
 });
 
 const initApp = () => {
-    //set the focus
+    setSearchFocusHandler('search');
 
-    //3 listeners clear text
+    const search = document.getElementById('search');
+    search.addEventListener('input', showClearTextButton);
+
+    const clear = document.getElementById('clear');
+    clear.addEventListener('click', clearSearchText);
+    clear.addEventListener('keydown', clearPushListener);
 
     const form = document.querySelector('[data-form="form"]');
 
@@ -22,22 +28,27 @@ const initApp = () => {
 const submitTheSearchHandler = (event) => {
     event.preventDefault();
 
-    //delete search results
+    deleteSearchResults('searchResults');
 
     processTheSearchHandler();
 
-    setSearchFocusHandler('#search');
+    setSearchFocusHandler('search');
 }
 
 //Procedural
 
 const processTheSearchHandler = async () => {
-    //clear the stats line
+   
+    clearStatsLine('stats');
 
     const searchTerm = getSearchTermHandler();
 
-    if(searchTerm('#search') === '') return;
+    if(searchTerm === '') return;
 
     const resultArray = await retriveSearchResults(searchTerm);
+
+    if(resultArray.length) buildSearchResults(resultArray);
+
+    setStatsLine(resultArray.length, 'stats');
 }
 
