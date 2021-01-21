@@ -16,10 +16,10 @@ export const useInterval = (callback, delay) => {
             if(typeof savedCallback?.current !== 'undefined'){
                 savedCallback.current();
             }
-            if(delay !== null){
-                const id = setInterval(tick, delay);
-                return () => clearInterval(id)
-            }
+        }
+        if(delay !== null){
+            const id = setInterval(tick, delay);
+            return () => clearInterval(id)
         }
     }, [delay]);
 }
