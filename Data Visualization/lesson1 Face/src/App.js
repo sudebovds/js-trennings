@@ -1,10 +1,18 @@
+import React from 'react';
+
 const App = () => {
+
+  const width = 960;
+  const height = 500;
+  const centerX = width / 2;
+  const centerY = height / 2;
+
   return (
     <div className="face">
-            <svg width="960" height="500" className="face__draw">
+            <svg width={width} height={height} className="face__draw">
                 <circle 
-                    cx="480" 
-                    cy="250" 
+                    cx={centerX} 
+                    cy={centerY} 
                     r="249"
                     fill="yellow"
                     stroke="black"
