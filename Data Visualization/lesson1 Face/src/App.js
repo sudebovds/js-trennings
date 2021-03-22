@@ -7,7 +7,7 @@ const height = 160;
 
 const arr = range(6 * 3);
 
-const App = () => arr.map( () =>  {
+const App = () => arr.map( (key, id) =>  {
 
   return (
     <Face 
@@ -22,6 +22,8 @@ const App = () => arr.map( () =>  {
       eyeRadius = {5 + Math.random() * 10}
       mouthWith = {7 + Math.random() * 9}
       mouthRadius = {30 + Math.random() * 10}
+
+      key = {id + key}
     />
   );
 });
