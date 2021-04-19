@@ -1,0 +1,8 @@
+.listItem{
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    padding: 15px 25px;
+}
