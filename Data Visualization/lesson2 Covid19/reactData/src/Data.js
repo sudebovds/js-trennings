@@ -1,20 +1,13 @@
 import { useEffect, useState } from "react";
 import { csv } from 'd3';
+import './data.css';
 import Message from "./components/message/Message";
 
 const url = `https://gist.githubusercontent.com/sudebovds/0620df3655bfe3638db025cd5e47da50/raw/cssColorsData.csv`;
 
-const liStyle = {
-    listStyle: 'none', 
-    cursor: 'pointer',
-    display: 'flex',
-    flexWrap: 'wrap',
-    maxWidth: '200px',
-    padding: '15px 25px'
-};
-
 const liClickHandler = (event) => {
-    document.getElementById('body').setAttribute('style', `background-color: ${event.target.id}`)
+    document.getElementById(event.target.id).style.color = 'black';
+    document.getElementById('body').setAttribute('style', `background-color: ${event.target.id}`);
 }
 
 const Data = () => {
@@ -36,10 +29,10 @@ const Data = () => {
             { data ? data.map((el) => {
 
                 return <li 
-                            className = 'liItem' 
+                            className = 'listItem' 
                             key = {el.Keyword} 
                             id = {el.Keyword}
-                            style = {liStyle} 
+                            style = {{color: el.Keyword}} 
                             onClick = {liClickHandler}
                         >
                               &#127754; {el.Keyword}
