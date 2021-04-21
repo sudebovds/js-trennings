@@ -35,6 +35,10 @@
     ]
   },
   "devDependencies": {
-    "d3": "^6.6.2"
+    "d3": "^6.6.2",
+    "vega": "^5.20.2",
+    "vega-lite": "^5.1.0",
+    "vega-lite-api": "^5.0.0",
+    "vega-tooltip": "^0.25.1"
   }
 }
