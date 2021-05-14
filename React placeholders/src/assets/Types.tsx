@@ -1,4 +1,4 @@
-export interface userProfile {
+export interface userProfileType {
     id: number;
     username: string;
     email: string;
@@ -19,4 +19,8 @@ export interface userProfile {
         catchPhrase: string;
         bs: string;
     }
+}
+
+export interface ProfileProps{
+    profiles: userProfileType[];
 }

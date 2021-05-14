@@ -1,35 +1,24 @@
-import React, { FC, useEffect, useState } from 'react';
-import axios from 'axios';
-import Profile from './Profile';
-import { userProfile } from '../../assets/Types';
-
-const Profiles: FC = () => {
-
-    const [isLoading, setIsLoading] = useState(true);
-    const [profiles, setProfiles] = useState([]);
-
-    useEffect(() => {
-        setIsLoading(true);
-
-        const fetchData = async () => {
-            try{
-                const { data } = await axios.get('https://jsonplaceholder.typicode.com/users');
-                setProfiles(data);
-            }
-            catch{}
-        }
-
-        fetchData();
-    }, []);
-
-    //console.log(profiles)
-
+import React, { FC } from 'react';
+import { ProfileProps } from '../../assets/Types';
+import Profile from './Profile'
+const Profiles: FC<ProfileProps> = ({profiles}) => {
     return (
-        <div>Here Profiles
-            {profiles.length > 0 ? 
-                <Profile 
-                    list = {profiles}
-                />
+        <div>
+            {profiles.length > 0 ?
+                profiles.map((profile) => {
+                    return(
+                        <Profile 
+                            key = {profile.id}
+                            id = {profile.id}
+                            username = {profile.username}
+                            email = {profile.email}
+                            company = {profile.company}
+                            website = {profile.website}
+                            adress = {profile.adress}
+                            phone = {profile.phone}
+                        />
+                    );
+                })
                 :
                 null
             }
