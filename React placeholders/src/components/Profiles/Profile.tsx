@@ -1,12 +1,17 @@
 import React, { FC } from 'react';
-import { userProfile } from '../../assets/Types';
+import { userProfileType } from '../../assets/Types';
+import './Profile.scss';
 
-const Profile = (list: userProfile[]) => {
 
+const Profile: FC<userProfileType> = ({username, email, company}) => {
     return (
-        <>
-            <h1>Ti huy {console.log(list.map(() => {}))}</h1>
-        </>
+        <article className = 'profile'>
+            <h3 className = 'profile__name'>Name: {username}</h3>
+            <p className ='profile__email'>Email: {email}</p>
+            <div className = 'profile__info'>
+                <p>Company: {company.name}</p>
+            </div>
+        </article>
     );
 
 }
