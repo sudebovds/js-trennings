@@ -2,11 +2,9 @@ const mongoose = require('mongoose');
 const Document = require('./Document');
 const defaultValue = '';
 
-mongoose.connect("mongodb://localhost:27017/google-docs-clone", {
+mongoose.connect("mongodb://localhost/google-docs-clone", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
 })
 
 const io = require('socket.io')(3001, {
