@@ -1,11 +1,18 @@
 import React from 'react';
 import { chatFeedProps } from '../assets/Types';
+import RenderMessages from './RenderMessages';
 
 const ChatFeed = (props: chatFeedProps) => {
-    console.log(props);
+    const { chats, activeChat, userName, messages } = props;
+    const chat = chats && chats[activeChat];
+
+    
+    console.log(<RenderMessages msgs = { messages } />)
 
     return (
-        <div>Chat feed</div>
+        <div>
+            
+        </div>
     );
 }
 
