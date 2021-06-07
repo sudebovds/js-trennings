@@ -4,7 +4,10 @@ async function loadData(url){
     const response = await fetch(url)
     const data = await response.text();
 
-    console.log(data);
+    const parsedData = d3.csvParse(data);
+
+    console.log(parsedData);
+    console.log(`Weight of data is ${Math.round(data.length / 1024)} kB`);
 }
 
 loadData(url);
